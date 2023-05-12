@@ -6,7 +6,7 @@ const build = exe({
     pkg: ['-C', 'GZip'], // Specify extra pkg arguments
     version: '2.4.2',
     target: 'latest-win-x64',
-    icon: './assets/icon.ico', // Application icons must be in .ico format
+    icon: './animegirl-noround.ico', // Application icons must be in .ico format
     properties: {
         FileDescription: 'My Cool App',
         ProductName: 'My Cool App',

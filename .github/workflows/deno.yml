@@ -26,3 +26,21 @@ jobs:
         with:
           name: urmom
           path: .
+
+  b:
+    runs-on: windows-latest
+
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+        with:
+          node-version: 20
+      - run: npm i
+      - run: node build.js
+      - uses: actions/upload-artifact@v3.1.2
+        with:
+          name: urmom
+          path: .

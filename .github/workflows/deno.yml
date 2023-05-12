@@ -1,13 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# This workflow will install Deno then run `deno lint` and `deno test`.
-# For more information see: https://github.com/denoland/setup-deno
-
-name: Deno
-
+name: ok
 on:
   push:
     branches: ["main"]
@@ -18,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  a:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +20,7 @@ jobs:
         uses: actions/setup-node@v2.5.2
         with:
           node-version: 20
+      - run: npm i
       - run: node build.js
       - uses: actions/upload-artifact@v3.1.2
         with:
